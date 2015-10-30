@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -68,8 +68,8 @@ html, body {
 }
 
 .header-content {
-    width: 780px;
-    margin: 0 auto 70px;
+    width: 900px;
+    margin: 0 auto 90px;
     height: 83px;
 }
 
@@ -77,22 +77,66 @@ html, body {
         vertical-align: middle;
         font-size: 12px;
         padding: 30px 0;
+        margin-left: 18px;
     }
+
+    .header-content > div {
+        float: left;
+    }
+
+    .header-content .aq {
+        white-space: nowrap;
+        float: right;
+        padding: 25px 0;
+    }
+
+        .header-content .aq strong {
+            float: left;
+            font-weight: 700;
+            color: #fc5658;
+            font-size: 16px;
+            line-height: 35px;
+            margin-right: 6px;
+        }
+
+        .header-content .aq div {
+            float: left;
+        }
+
+            .header-content .aq div:before {
+                content: "";
+                display: block;
+                float: left;
+                width: 2px;
+                height: 35px;
+                background: no-repeat no-repeat center center url('../img/ask-separator.png');
+            }
+
+
+        .header-content .aq a {
+            display: block;
+            font-size: 14px;
+            text-decoration: none;
+            color: #144e5a;
+            margin: 2px 6px;
+        }
+
+            .header-content .aq a em {
+                font-weight: 700;
+            }
+
+            .header-content .aq a span {
+                color: #000;
+            }
 
 /*      Body        */
 .body-content {
-    width: 620px;
+    width: 900px;
     margin: 0 auto;
 }
 
     .body-content a {
         color: #000;
-    }
-
-    .body-content input[type=text], .body-content input[type=email], .body-content input[type=password] {
-        padding: 6px 4px;
-        font-size: 12px;
-        width: 240px;
     }
 
     .body-content h2 {
@@ -134,6 +178,8 @@ html, body {
 
 /*      Common      */
 
+
+
 p {
     margin: 8px 0;
 }
@@ -173,17 +219,31 @@ p {
 
 /*      Index       */
 
-.body-content .login-form {
+.login-form input[type=text], .login-form input[type=email], .login-form input[type=password],
+.register-form input[type=text], .register-form input[type=email], .register-form input[type=password] {
+    padding: 6px 4px;
+    font-size: 12px;
+    width: 240px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.register-form input[type=text], .register-form input[type=email], .register-form input[type=password] {
+    width: 100%;
+}
+
+.body-content .login-form, .register-form {
     float: left;
     font-size: 12px;
 }
 
-    .body-content .login-form label {
+    .body-content .login-form label, .register-form label {
         display: block;
         padding: 4px 0;
     }
 
-        .body-content .login-form label input {
+        .body-content .login-form label input, .register-form input {
             display: block;
             margin: 6px 0;
         }
@@ -202,9 +262,51 @@ p {
     width: 100%;
 }
 
+    .register-form form {
+        padding: 0 35px;
+    }
+
+        .register-form form input[type=submit] {
+            margin: 25px auto 42px;
+        }
+
     .register-form h2 {
         background: #93ebaa;
         width: 100%;
         display: block;
         text-align: center;
+        font-size: 16px;
+        padding: 12px 0;
+        margin-bottom: 12px;
     }
+
+/*      Sensors     */
+
+table.sensors-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    table.sensors-table td, table.sensors-table th {
+        padding: 12px;
+        background: #eeeeee;
+        border: 2px solid #fff;
+        font-size: 16px;
+        vertical-align: middle;
+    }
+
+        table.sensors-table td.alert {
+            color: #fc5658;
+        }
+
+        table.sensors-table th.sorted {
+            font-weight: 700;
+        }
+
+            table.sensors-table th.sorted.sorted-descending::after {
+                content: " ↓";
+            }
+
+        table.sensors-table td:empty {
+            padding: 1px 0 0;
+        }
