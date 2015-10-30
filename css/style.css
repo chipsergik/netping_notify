@@ -282,6 +282,43 @@ p {
 
 /*      Sensors     */
 
+.tab-navs ul {
+    float: left;
+    border-bottom: 1px solid #a0a0a0;
+    width: 100%;
+}
+
+.tab-navs li {
+    float: left;
+}
+
+    .tab-navs li:first-child a {
+        border-left: 1px solid #a0a0a0;
+        margin-left: 32px;
+    }
+
+    .tab-navs li a {
+        float: left;
+        text-align: center;
+        width: 175px;
+        line-height: 38px;
+        font-size: 18px;
+        text-decoration: none;
+        margin-bottom: -1px;
+        color: #a0a0a0;
+    }
+
+        .tab-navs li a.active {
+            border-top: 1px solid #a0a0a0;
+            border-right: 1px solid #a0a0a0;
+            background: #fff;
+            color: #000;
+        }
+
+.actions {
+    margin: 15px 0;
+}
+
 table.sensors-table {
     width: 100%;
     border-collapse: collapse;
