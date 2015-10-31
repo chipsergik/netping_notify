@@ -133,6 +133,7 @@ html, body {
 .body-content {
     width: 900px;
     margin: 0 auto;
+    padding-bottom: 140px;
 }
 
     .body-content a {
@@ -177,8 +178,8 @@ html, body {
         }
 
 /*      Common      */
-
-
+.clear {
+}
 
 p {
     margin: 8px 0;
@@ -288,6 +289,14 @@ p {
     width: 100%;
 }
 
+.clear {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
 .tab-navs li {
     float: left;
 }
@@ -317,11 +326,14 @@ p {
 
 .actions {
     margin: 15px 0;
+    text-align: right;
 }
 
+
 table.sensors-table {
-    width: 100%;
+       /* width: 100%; */
     border-collapse: collapse;
+    margin: 0 -1px;
 }
 
     table.sensors-table td, table.sensors-table th {
@@ -346,4 +358,37 @@ table.sensors-table {
 
         table.sensors-table td:empty {
             padding: 1px 0 0;
+        }
+
+/*      Sensor edit     */
+.sensor-parameters {
+    display: table;
+    width: 620px;
+}
+
+    .sensor-parameters .sensor-parameter {
+        width: 100%;
+        background: #eeeeee;
+        height: 50px;
+        padding: 0 22px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        vertical-align: middle;
+        position:relative;
+    }
+
+        .sensor-parameters .sensor-parameter select {
+            float: right;
+            width: 390px;
+            height: 38px;
+            padding-left: 12px;
+            padding-right: 12px;
+            border: 1px solid #ebebeb;
+            top: 5px;
+            right: 22px;
+            /* vertical-align: top; */
+            position: absolute;
         }
