@@ -31,13 +31,13 @@
                     <div class="tabs">
                         <div class="tab-navs">
                             <ul>
-                                <li><a href="#sensors" class="active">Датчики</a></li>
-                                <li><a href="#notifications">Уведомления</a></li>
+                                <li><a href="#sensors">Датчики</a></li>
+                                <li><a href="#notifications" class="active">Уведомления</a></li>
                             </ul>
                         </div>
+                        <div class="clear"></div>
                         <div class="tab-content">
                             <div id="sensors">
-                                <div class="clear"></div>
                                 <div class="actions">
                                     <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить датчик</button>
                                 </div>
@@ -73,10 +73,15 @@
                                 </table>
                             </div>
                             <div class="sensor-edit">
+
+                                <h2>Редактирование датчика разбития стекла</h2>
+
                                 <div class="sensor-parameters">
-                                    <h4></h4>
+                                    <h4>&nbsp;</h4>
                                     <div class="sensor-parameter">
-                                    <span>IP-адреc</span>
+                                        <div class="sensor-parameter-name">
+                                            <span>IP-адреc</span>
+                                        </div>
                                         <select>
                                             <option>
                                                 127.0.0.1
@@ -87,7 +92,9 @@
                                         </select>
                                     </div>
                                     <div class="sensor-parameter">
-                                        <span>Community</span>
+                                        <div class="sensor-parameter-name">
+                                            <span>Community</span>
+                                        </div>
                                         <select>
                                             <option>
                                                 Значение
@@ -98,7 +105,9 @@
                                         </select>
                                     </div>
                                     <div class="sensor-parameter">
-                                        <span>Тип датчика<br />(Enterprise OID)</span>
+                                        <div class="sensor-parameter-name">
+                                            <span>Тип датчика<br />(Enterprise OID)</span>
+                                        </div>
                                         <select>
                                             <option>
                                                 Значение
@@ -109,7 +118,9 @@
                                         </select>
                                     </div>
                                     <div class="sensor-parameter">
-                                        <span>Значение датчика<br />(Varbind OID)</span>
+                                        <div class="sensor-parameter-name">
+                                            <span>Значение датчика<br />(Varbind OID)</span>
+                                        </div>
                                         <select>
                                             <option>
                                                 Значение
@@ -120,10 +131,92 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="sensor-values">
+                                <div class="sensor-values" style="display: none;">
                                     <h4>Значение датчика</h4>
-
+                                    <div class="sensor-parameter">
+                                        <div class="sensor-parameter-name">
+                                            <span>Community</span>
+                                        </div>
+                                    </div>
+                                    <div class="sensor-parameter">
+                                        <div class="sensor-parameter-name">
+                                            <span>Community</span>
+                                        </div>
+                                    </div>
+                                    <div class="sensor-parameter">
+                                        <div class="sensor-parameter-name">
+                                            <span>Community</span>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="clear"></div>
+                                <div class="actions">
+                                    <button class="btn btn-primary">Завершить редактирование</button>
+                                </div>
+                            </div>
+                            <div id="notifications" class="active">
+                                <div class="actions">
+                                    <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить уведомление</button>
+                                </div>
+                                <div class="notification">
+                                    <div class="notification-condition">
+                                        <h3>Если</h3>
+                                        <div class="notification-value">
+                                            Температура на улице
+                                        </div>
+                                        <div class="notification-value">
+                                            >
+                                        </div>
+                                        <div class="notification-value">
+                                            10&#730;С
+                                        </div>
+                                        <h3>И</h3>
+                                        <div class="notification-value">
+                                            Температура на улице
+                                        </div>
+                                        <div class="notification-value">
+                                            >
+                                        </div>
+                                        <div class="notification-value">
+                                            10&#730;С
+                                        </div>
+                                    </div>
+                                    <div class="notification-then">
+                                        <h3>То</h3>
+                                        <div class="notification-value">
+                                            Отправить e-mail на support@netping.ru
+                                        </div>
+                                        <div class="notification-value">
+                                            Тема: Срабатывание датчика
+                                        </div>
+                                    </div>
+                                    <div class="notification-schedule-repeat">
+                                        <div class="notification-schedule">
+                                            <h3>Расписание</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Однократно
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notification-repeat">
+                                            <h3>Повторения</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Температура на улице
+                                                </div>
+                                            </div>
+                                            <h3>В течение</h3>
+                                            <div class="condition">
+                                                <div class="notification-value">
+                                                    Температура на улице
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

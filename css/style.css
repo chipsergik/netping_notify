@@ -302,7 +302,6 @@ p {
 }
 
     .tab-navs li:first-child a {
-        border-left: 1px solid #a0a0a0;
         margin-left: 32px;
     }
 
@@ -318,11 +317,20 @@ p {
     }
 
         .tab-navs li a.active {
+            border-left: 1px solid #a0a0a0;
             border-top: 1px solid #a0a0a0;
             border-right: 1px solid #a0a0a0;
             background: #fff;
             color: #000;
         }
+
+.tab-content > div {
+    display: none;
+}
+
+    .tab-content > div.active {
+        display: block;
+    }
 
 .actions {
     margin: 15px 0;
@@ -331,7 +339,7 @@ p {
 
 
 table.sensors-table {
-       /* width: 100%; */
+    /* width: 100%; */
     border-collapse: collapse;
     margin: 0 -1px;
 }
@@ -361,15 +369,24 @@ table.sensors-table {
         }
 
 /*      Sensor edit     */
-.sensor-parameters {
-    display: table;
-    width: 620px;
+.sensor-edit h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 45px 0;
 }
 
-    .sensor-parameters .sensor-parameter {
+.sensor-edit {
+}
+
+    .sensor-edit .sensor-parameters {
+        width: 620px;
+        float: left;
+    }
+
+    .sensor-edit .sensor-parameter {
         width: 100%;
         background: #eeeeee;
-        height: 50px;
+        height: 60px;
         padding: 0 22px;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
@@ -377,18 +394,110 @@ table.sensors-table {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         vertical-align: middle;
-        position:relative;
+        position: relative;
     }
 
-        .sensor-parameters .sensor-parameter select {
+        .sensor-edit .sensor-parameter .sensor-parameter-name {
+            display: table;
+            height: 100%;
+        }
+
+        .sensor-edit .sensor-parameter span {
+            font-size: 16px;
+            vertical-align: middle;
+            display: table-cell;
+        }
+
+        .sensor-edit .sensor-parameter select {
             float: right;
             width: 390px;
-            height: 38px;
+            height: 36px;
             padding-left: 12px;
             padding-right: 12px;
             border: 1px solid #ebebeb;
-            top: 5px;
+            top: 10px;
             right: 22px;
             /* vertical-align: top; */
             position: absolute;
+            font-size: 16px;
         }
+
+    .sensor-edit .sensor-values {
+        width: 216px;
+        text-align: center;
+        float: right;
+    }
+
+        .sensor-edit .sensor-values .sensor-parameter-name {
+            width: 100%;
+            text-align: center;
+        }
+
+    .sensor-edit h4 {
+        margin-bottom: 10px;
+    }
+
+    .sensor-edit .actions {
+        margin-top: 25px;
+    }
+
+/*      Conditions      */
+.notification {
+    line-height: 36px;
+}
+
+    .notification > div {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+        padding: 0 10px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .notification > div:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+
+        .notification > div > div, .notification > div > h3, .notification-schedule-repeat > div > div, .notification-schedule-repeat > div > h3 {
+            float: left;
+        }
+
+    .notification .notification-value {
+        background: #ffffff;
+        margin: 10px;
+        padding: 0 10px;
+    }
+
+        .notification .notification-value + .notification-value {
+            margin-left: 0;
+        }
+
+    .notification h3:first-child {
+        margin-left: 0;
+    }
+
+    .notification h3 {
+        margin: 0 8px;
+        line-height: 56px;
+    }
+
+.notification-schedule-repeat > div {
+    width: 100%;
+}
+
+.notification-condition {
+    background: #eeeeee;
+}
+
+.notification-then {
+    background: #e6f8e5;
+}
+
+.notification-schedule-repeat {
+    background: #f7f5f5;
+}
