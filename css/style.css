@@ -199,6 +199,18 @@ p {
         font-weight: 400;
     }
 
+    .btn.btn-cancel {
+        background: #e5e5e5;
+        color: #144e5a;
+        font-weight: 400;
+    }
+
+    .btn.btn-info {
+        background: #144e5a;
+        color: #ffffff;
+        font-weight: 400;
+    }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -316,13 +328,13 @@ p {
         color: #a0a0a0;
     }
 
-        .tab-navs li a.active {
-            border-left: 1px solid #a0a0a0;
-            border-top: 1px solid #a0a0a0;
-            border-right: 1px solid #a0a0a0;
-            background: #fff;
-            color: #000;
-        }
+    .tab-navs li.active a {
+        border-left: 1px solid #a0a0a0;
+        border-top: 1px solid #a0a0a0;
+        border-right: 1px solid #a0a0a0;
+        background: #fff;
+        color: #000;
+    }
 
 .tab-content > div {
     display: none;
@@ -336,6 +348,20 @@ p {
     margin: 15px 0;
     text-align: right;
 }
+
+    .actions button {
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 35px;
+    }
+
+    .actions .icon.add-icon:before {
+        content: '+';
+        font-size: 24px;
+        font-weight: 700;
+        top: 1px;
+        position: relative;
+    }
 
 
 table.sensors-table {
@@ -367,6 +393,41 @@ table.sensors-table {
         table.sensors-table td:empty {
             padding: 1px 0 0;
         }
+
+    table.sensors-table .actions {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+        table.sensors-table .actions .btn {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 0 5px;
+            vertical-align: middle;
+        }
+
+            table.sensors-table .actions .btn.remove-sensor {
+                padding: 0;
+                width: 22px;
+                height: 22px;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                background: #eb6e0e url('../img/remove-sensor.png') no-repeat no-repeat center center;
+                margin-right: 8px;
+            }
+
+            table.sensors-table .actions .btn.edit-sensor:before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                background-image: url('../img/edit.png');
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+
+
 
 /*      Sensor edit     */
 .sensor-edit h2 {
@@ -440,6 +501,38 @@ table.sensors-table {
     .sensor-edit .actions {
         margin-top: 25px;
     }
+
+.delete-confirmation {
+    border: 1px solid #144e5a;
+    padding: 16px;
+    width: 350px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 18px;
+}
+
+    .delete-confirmation h2 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .delete-confirmation .actions {
+        text-align: center;
+        margin-bottom: 0;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+        .delete-confirmation .actions .btn {
+            width: 150px;
+        }
+
+            .delete-confirmation .actions .btn + .btn {
+                margin-left: 16px;
+            }
 
 /*      Conditions      */
 .notification {
@@ -541,8 +634,6 @@ table.sensors-table {
             .notification-status-bar .notification-actions button.edit-notification {
                 background-image: url(../img/edit.png);
             }
-
-
 
             .notification-status-bar .notification-actions button:active {
                 top: 1px;

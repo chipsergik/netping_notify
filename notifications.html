@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Netping Notify</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-content">
+            <div class="header-wrapper">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="/img/logo.png" />
+                    </div>
+                    <div class="slogan">
+                        Устройства мониторинга серверных комнат<br />
+                        и удаленного управления электропитанием
+                    </div>
+                    <div class="aq">
+                        <strong>Задать вопрос:</strong>
+                        <div>
+                            <a href="tel:74956468537">тел.: <span><em>+7(495) 646-8537</em></span></a>
+                            <a href="mailto:support@netping.ru">e-mail: <span>support@netping.ru</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-wrapper">
+                <div class="body-content">
+                    <div class="notification-edit">
+                        <h2>Настройка Уведомления</h2>
+                        <section>
+                            <h3>Если</h3>
+                            <select>
+                                <option>Температура на улице</option>
+                                <option>Температура в шкафу</option>
+                                <option>Влажность в шкафу</option>
+                            </select>
+                            <select>
+                                <option>></option>
+                                <option>=</option>
+                                <option><</option>
+                            </select>
+                            <input type="text" />
+                        </section>
+                        <section>
+                            <h3>То</h3>
+                            <select>
+                                <option>Отправить e-mail</option>
+                                <option>Отправить SMS</option>
+                                <option>Включить сигнализацию</option>
+                            </select>
+                            <select>
+                                <option>support@netping.ru</option>
+                                <option>info@netping.ru</option>
+                            </select>
+                            <input type="text" placeholder="Тема сообщения e-mail" />
+                            <textarea placeholder="Текст уведомления"></textarea>
+                        </section>
+                        <section>
+                            <h3>Расписание</h3>
+                            <select>
+                                <option>Отправить e-mail</option>
+                                <option>Отправить SMS</option>
+                                <option>Включить сигнализацию</option>
+                            </select>
+                            <select>
+                                <option>support@netping.ru</option>
+                                <option>info@netping.ru</option>
+                            </select>
+                            <input type="text" placeholder="Тема сообщения e-mail" />
+                            <textarea placeholder="Текст уведомления"></textarea>
+                        </section>
+                        <section>
+                            <h3>Повторы</h3>
+                            <select>
+                                <option>Не повторять</option>
+                                <option>Каждые 5 минут</option>
+                                <option>Каждые 10 минут</option>
+                                <option>Каждые 30 минут</option>
+                                <option>Каждые час</option>
+                                <option>Свой интервал</option>
+                            </select>
+                            <span>В течение</span>
+                            <select>
+                                <option>Бесконечно</option>
+                                <option>15 мин.</option>
+                                <option>30 мин.</option>
+                                <option>1 час</option>
+                                <option>12 часов</option>
+                                <option>1 день</option>
+                                <option>Свой интервал</option>
+                            </select>
+                            <input type="text"/>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-wrapper">
+                <div class="footer-content">
+                    <div class="copyright">
+                        © 2015 Netping
+                    </div>
+                    <div class="footer-block"><a href="#">Конфиденциальность</a></div>
+                    <div class="footer-block"><a href="#">Публичная оферта</a></div>
+                    <div class="footer-block"><a href="#">Персональные данные</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

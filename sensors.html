@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Netping Notify</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
@@ -31,13 +32,13 @@
                     <div class="tabs">
                         <div class="tab-navs">
                             <ul>
-                                <li><a href="#sensors">Датчики</a></li>
-                                <li><a href="#notifications" class="active">Уведомления</a></li>
+                                <li class="active"><a href="#sensors">Датчики</a></li>
+                                <li><a href="#notifications">Уведомления</a></li>
                             </ul>
                         </div>
                         <div class="clear"></div>
                         <div class="tab-content">
-                            <div id="sensors">
+                            <div id="sensors" class="active">
                                 <div class="actions">
                                     <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить датчик</button>
                                 </div>
@@ -61,100 +62,107 @@
                                         <td>Датчик разбития стекла</td>
                                         <td class="alert">Тревога</td>
                                         <td>13:23 31 Августа 2015 г.</td>
-                                        <td></td>
+                                        <td class="actions">
+                                            <button class="btn btn-primary remove-sensor"></button>
+                                            <button class="btn btn-primary edit-sensor">Редактировать</button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>89.146.83.215</td>
                                         <td>Датчик разбития стекла</td>
                                         <td>Ок</td>
                                         <td>13:23 31 Августа 2015 г.</td>
-                                        <td></td>
+                                        <td class="actions">
+                                            <button class="btn btn-primary remove-sensor"></button>
+                                            <button class="btn btn-primary edit-sensor">Редактировать</button>
+                                        </td>
                                     </tr>
                                 </table>
-                            </div>
-                            <div class="sensor-edit">
+                                <div class="sensor-edit">
 
-                                <h2>Редактирование датчика разбития стекла</h2>
+                                    <h2>Редактирование датчика разбития стекла</h2>
 
-                                <div class="sensor-parameters">
-                                    <h4>&nbsp;</h4>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>IP-адреc</span>
+                                    <div class="sensor-parameters">
+                                        <h4>&nbsp;</h4>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>IP-адреc</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    127.0.0.1
+                                                </option>
+                                                <option>
+                                                    192.168.1.1
+                                                </option>
+                                            </select>
                                         </div>
-                                        <select>
-                                            <option>
-                                                127.0.0.1
-                                            </option>
-                                            <option>
-                                                192.168.1.1
-                                            </option>
-                                        </select>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    Значение
+                                                </option>
+                                                <option>
+                                                    Значение 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Тип датчика<br />(Enterprise OID)</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    Значение
+                                                </option>
+                                                <option>
+                                                    Значение 2
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Значение датчика<br />(Varbind OID)</span>
+                                            </div>
+                                            <select>
+                                                <option>
+                                                    Значение
+                                                </option>
+                                                <option>
+                                                    Значение 2
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>Community</span>
+                                    <div class="sensor-values" style="display: none;">
+                                        <h4>Значение датчика</h4>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
                                         </div>
-                                        <select>
-                                            <option>
-                                                Значение
-                                            </option>
-                                            <option>
-                                                Значение 2
-                                            </option>
-                                        </select>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                        </div>
+                                        <div class="sensor-parameter">
+                                            <div class="sensor-parameter-name">
+                                                <span>Community</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>Тип датчика<br />(Enterprise OID)</span>
-                                        </div>
-                                        <select>
-                                            <option>
-                                                Значение
-                                            </option>
-                                            <option>
-                                                Значение 2
-                                            </option>
-                                        </select>
-                                    </div>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>Значение датчика<br />(Varbind OID)</span>
-                                        </div>
-                                        <select>
-                                            <option>
-                                                Значение
-                                            </option>
-                                            <option>
-                                                Значение 2
-                                            </option>
-                                        </select>
+                                    <div class="clear"></div>
+                                    <div class="actions">
+                                        <button class="btn btn-primary">Завершить редактирование</button>
                                     </div>
                                 </div>
-                                <div class="sensor-values" style="display: none;">
-                                    <h4>Значение датчика</h4>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>Community</span>
-                                        </div>
-                                    </div>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>Community</span>
-                                        </div>
-                                    </div>
-                                    <div class="sensor-parameter">
-                                        <div class="sensor-parameter-name">
-                                            <span>Community</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="actions">
-                                    <button class="btn btn-primary">Завершить редактирование</button>
-                                </div>
+
                             </div>
-                            <div id="notifications" class="active">
+                            <div id="notifications">
                                 <div class="actions">
                                     <button class="btn btn-primary"><span class="icon add-icon"></span> Добавить уведомление</button>
                                 </div>
@@ -349,5 +357,28 @@
             </div>
         </div>
     </div>
+    <div class="overlay" style="display:none;">
+        <div class="overlay-window-wrapper">
+            <div class="overlay-window">
+                <div class="delete-confirmation">
+                    <h2>
+                        Подтверждение удаления
+                    </h2>
+                    <form>
+                        <p>
+                            Вы действительно хотите удалить
+                        </p>
+                        <p>
+                            Датчик разбития стекла?
+                        </p>
+                        <p class="actions">
+                            <br /><input type="submit" value="Удалить" class="btn btn-info" /><button class="btn btn-cancel">Отмена</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
