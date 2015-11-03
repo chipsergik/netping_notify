@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+    min-width: 800px;
+    max-width: 1920px;
 }
 
 ol, ul {
@@ -178,9 +180,6 @@ html, body {
         }
 
 /*      Common      */
-.clear {
-}
-
 p {
     margin: 8px 0;
 }
@@ -231,6 +230,10 @@ p {
     }
 
 /*      Index       */
+.index-wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
 
 .login-form input[type=text], .login-form input[type=email], .login-form input[type=password],
 .register-form input[type=text], .register-form input[type=email], .register-form input[type=password] {
@@ -673,3 +676,206 @@ table.sensors-table {
             .notification-status-bar .history .history-popup > div > div:last-child {
                 float: right;
             }
+
+/*      Notification edit       */
+
+.notification-edit {
+}
+
+    .notification-edit h2 {
+        background: #e6f8e5;
+        font-size: 22px;
+        font-weight;
+        text-align: center;
+        padding: 10px 0;
+        margin-bottom: 0;
+    }
+
+    .notification-edit h3 {
+        background: #eeeeee;
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-bottom: 10px;
+    }
+
+    .notification-edit section {
+        margin-bottom: 10px;
+    }
+
+        .notification-edit section span {
+            font-size: 14px;
+            margin: 0 4px;
+        }
+
+            .notification-edit section span.first-in-line {
+                margin-left: 258px;
+                line-height: 50px;
+                min-width: 50px;
+                display: inline-block;
+            }
+
+        .notification-edit section div.first-in-line {
+            margin-left: 258px;
+        }
+
+        .notification-edit section .week-day-checks label {
+            width: 125px;
+            display: inline-block;
+        }
+
+    .notification-edit select, .notification-edit input, .notification-edit textarea {
+        padding: 4px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 28px;
+    }
+
+        .notification-edit select:nth-child(2) {
+            width: 200px;
+            margin-left: 50px;
+        }
+
+        .notification-edit input.small-input {
+            width: 42px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+    .notification-edit textarea {
+        resize: none;
+        vertical-align: top;
+        width: 260px;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 150px;
+    }
+
+    .notification-edit .time {
+        width: 139px;
+    }
+
+    .notification-edit .actions {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    .notification-edit .select-box-with-checks {
+        display: inline-block;
+        width: 200px;
+        position: relative;
+    }
+
+        .notification-edit .select-box-with-checks select {
+            width: 100%;
+        }
+
+        .notification-edit .select-box-with-checks .select-content {
+            position: absolute;
+            width: 100%;
+            padding: 4px;
+            border: 1px solid #a9a9a9;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #fff;
+            margin-top: -1px;
+            display: none;
+            z-index: 11;
+        }
+
+            .notification-edit .select-box-with-checks .select-content.select-content-inline div {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .notification-edit .select-box-with-checks .select-content.select-content-inline label {
+                min-width: 48px;
+            }
+
+
+            .notification-edit .select-box-with-checks .select-content label {
+                display: block;
+            }
+
+        .notification-edit .select-box-with-checks.wide {
+            width: 405px;
+        }
+
+    .notification-edit .notification-if-actions {
+        float: right;
+    }
+
+        .notification-edit .notification-if-actions .btn {
+            width: 24px;
+            height: 24px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            border: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background: no-repeat no-repeat center center;
+            display: inline-block;
+            padding: 0;
+            vertical-align: top;
+        }
+
+            .notification-edit .notification-if-actions .btn.btn-add-condition {
+                background-color: #60af6e;
+                color: #fff;
+            }
+
+            .notification-edit .notification-if-actions .btn.btn-remove-condition {
+                background-color: #fc5658;
+                background-image: url('../img/remove-sensor.png');
+            }
+
+    .notification-edit input[type=checkbox], .notification-edit input[type=radio] {
+        height: auto;
+    }
+
+@media screen and (max-width: 1279px) {
+    .header-content {
+        width: 800px;
+    }
+
+    .body-content {
+        width: 800px;
+    }
+
+    .notification-edit select:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .notification-edit textarea {
+        width: 222px;
+    }
+
+    .notification-edit .actions {
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .notification-edit section span.first-in-line {
+        margin-left: 218px;
+    }
+
+    .notification-edit section div.first-in-line {
+        margin-left: 218px;
+    }
+
+    .tab-content {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .header-content {
+        width: 1280px;
+    }
+}

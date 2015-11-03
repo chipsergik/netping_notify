@@ -22,4 +22,13 @@
         e.preventDefault();
         $('.overlay').show();
     });
+
+    $('.select-box-with-checks select').on('click', function (e) {
+        e.preventDefault();
+        $(this).siblings('.select-content').toggle();
+    })
+
+    $('.select-box-with-checks').on('blur', function () {
+        $(this).find('.select-content').hide();
+    });
 });
